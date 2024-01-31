@@ -1,0 +1,17 @@
+/target
+client/target
+server/target
+socket/target
+
+# Added by cargo
+#
+# already existing elements were commented out
+
+#/target
+
+
+# Added by cargo
+#
+# already existing elements were commented out
+
+#/target
