@@ -25,7 +25,7 @@ fn App<G: Html>(cx: Scope) -> View<G> {
             integration=HistoryIntegration::new(),
             view=|cx, route: &ReadSignal<AppRoutes>| {
                 view! { cx,
-                    div(class="h-screen w-screen bg-gray-200 dark:bg-slate-950 dark:text-slate-300") {
+                    div(class="h-screen w-screen bg-gray-200 dark:bg-neutral-950 dark:text-neutral-300") {
                         (match route.get().as_ref() {
                             AppRoutes::HomePage => view! { cx, "This is the HomePage" },
                             AppRoutes::LoginPage => view! { cx, LoginView {} },
