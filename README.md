@@ -15,3 +15,19 @@ Install trunk in order to serve WebAssembly
 ```
 cargo install --locked trunk
 ```
+To run the client side
+```
+cd client
+trunk serve
+```
+To run the server side
+```
+cd server
+cargo run
+```
+With watch
+```
+cargo install cargo-watch
+cd server
+cargo watch -q -c -w src/ -x run
+```
