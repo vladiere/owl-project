@@ -12,3 +12,5 @@ workspace = true
 [dependencies]
 base64 = "0.21.7"
 time = { version = "0.3.32", features = ["formatting", "parsing", "serde"] }
+argonautica = "0.2.0"
+

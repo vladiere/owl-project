@@ -28,6 +28,10 @@ SERVICE_TOKEN_KEY="9FoHBmkyxbgu_xFoQK7e0jz3RMNVJWgfvbVn712FBNH9LLaAWS3CS6Zpcg6Rv
 
 SERVICE_TOKEN_DURATION_SEC="1800"
 
+## -- Hash Secrets
+HASH_SECRET="OWL-project-2024"
+
+
 ## -- Config map
 
 # This will be relative to Cargo.toml

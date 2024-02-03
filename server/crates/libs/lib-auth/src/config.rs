@@ -1,4 +1,4 @@
-use lib_utils::envs::{get_env_b64u_as_u8s, get_env_parse};
+use lib_utils::envs::{get_env, get_env_b64u_as_u8s, get_env_parse};
 use std::sync::OnceLock;
 
 // region: ---- Public function
@@ -25,6 +25,9 @@ pub struct AuthConfig {
     // -- Token
     pub TOKEN_KEY: Vec<u8>,
     pub TOKEN_DURATION_SEC: f64,
+
+    // -- Hash secret
+    pub HASH_SECRET: String,
 }
 
 // endregion: ---- Public structs
@@ -39,6 +42,8 @@ impl AuthConfig {
             // -- Token
             TOKEN_KEY: get_env_b64u_as_u8s("SERVICE_TOKEN_KEY")?,
             TOKEN_DURATION_SEC: get_env_parse("SERVICE_TOKEN_DURATION_SEC")?,
+            // -- Hash secret
+            HASH_SECRET: get_env("HASH_SECRET")?,
         })
     }
 }

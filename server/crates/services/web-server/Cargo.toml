@@ -7,6 +7,9 @@ edition = "2021"
 
 [dependencies]
 #---- App Libs
+lib-utils = { path = "../../libs/lib-utils" }
+lib-auth = { path = "../../libs/lib-auth" }
+lib-core = { path = "../../libs/lib-core" }
 
 #---- Async
 tokio = { version = "1.35.1", features = ["full"] }
@@ -21,12 +24,12 @@ axum = { version = "0.7.4", features = ["macros"] }
 tower-http = { version = "0.5.1", features = ["fs", "cors"] }
 tower-cookies = "0.10.0"
 
-#---- Database
-sqlx = { workspace = true }
-
 #---- Tracing
 tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+
+#---- Database
+sqlx = { version = "0.7.3", features = ["runtime-tokio-rustls", "postgres", "uuid", "time"] }
 
 #---- Others
 lazy-regex = "3.1.0"
@@ -34,7 +37,13 @@ async-trait = "0.1.77"
 strum_macros = "0.26.1"
 uuid = { version = "1.6.1", features = ["v4", "fast-rng"] }
 derive_more = { workspace = true }
+hmac = "0.12.1"
+argonautica = "0.2.0"
+chrono = { version = "0.4.31", features = ["serde"] }
+jwt = "0.16.0"
 
 [dev-dependencies]
 anyhow = "1.0.79"
 httpc-test = "0.1.8"
+uuid = { version = "1.7.0", features = ["v4", "fast-rng"] }
+time = { version = "0.3.32", features = ["formatting", "parsing", "serde"]}

@@ -1,10 +1,10 @@
 use sycamore::prelude::*;
 
 #[component]
-pub fn HomeView<G: Html>(cx: Scope) -> View<G> {
+pub fn DashboardView<G: Html>(cx: Scope) -> View<G> {
     view! { cx,
         p {
-            "Home page"
+            "Dashboard"
         }
     }
 }

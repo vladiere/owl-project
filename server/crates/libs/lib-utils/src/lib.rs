@@ -5,5 +5,9 @@
 //!
 
 pub mod b64;
+mod config;
+pub mod encrypt;
 pub mod envs;
 pub mod time;
+
+pub use config::utils_config;
