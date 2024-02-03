@@ -1,0 +1,16 @@
+[package]
+name = "lib-utils"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+doctest = false
+
+[lints]
+workspace = true
+
+[dependencies]
+base64 = "0.21.7"
+time = { version = "0.3.32", features = ["formatting", "parsing", "serde"] }
+argonautica = "0.2.0"
+
