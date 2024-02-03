@@ -13,17 +13,17 @@ pub fn LoginView<G: Html>(cx: Scope) -> View<G> {
                 }
                 div(class="flex flex-col gap-2") {
                     div(class="mb-6") {
-                        label(for="username", class="block mb-2 text-sm font-medium text-gray-900 dark:text-white") { "Username" }
-                        input(type="text", id="username", class="bg-transparent border-0 border-b-2 outline-none border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder="e.g john123", required=true)
+                        label(for="username", class="block mb-2 text-sm font-medium text-gray-900 text-white") { "Username" }
+                        input(type="text", id="username", class="bg-transparent border-0 border-b-2 outline-none border text-sm focus:border-blue-500 block w-full p-2.5 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 ocus:border-blue-500", placeholder="e.g john123", required=true)
                     }
                     div {
-                        label(for="password", class="block mb-2 text-sm font-medium text-gray-900 dark:text-white") { "Password" }
+                        label(for="password", class="block mb-2 text-sm font-medium text-gray-900 text-white") { "Password" }
                         input(type="password", id="password", class="bg-transparent border-0 border-b-2 outline-none border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder="•••••••••", required=true)
                     }
                 }
                 div(class="flex flex-col items-end gap-5") {
                     a(href="/forgot_password", class="text-6md font-medium hover:underline hover:italic") { "Forgot Password?" }
-                    button(type="button", class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-lg w-full sm:w-auto px-10 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800") { "Login" }
+                    button(type="button", class="text-white focus:ring-4 focus:outline-none font-medium text-lg w-full sm:w-auto px-10 py-1.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800") { "Login" }
                 }
             }
         }
