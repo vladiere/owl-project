@@ -37,7 +37,7 @@ fn App<G: Html>(cx: Scope) -> View<G> {
             integration=HistoryIntegration::new(),
             view=move |cx, route: &ReadSignal<AppRoutes>| {
                 view! { cx,
-                    div(class="h-screen w-screen bg-gray-200 dark:bg-neutral-950 dark:text-neutral-300") {
+                    div(class="h-screen w-screen bg-neutral-950 text-neutral-300") {
                         (match route.get().as_ref() {
                             AppRoutes::HomePage => view! { cx,
                                 div(class="h-full w-full flex flex-row") {
