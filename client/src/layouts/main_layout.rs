@@ -1,9 +1,13 @@
 use sycamore::prelude::*;
+use web_sys::{console, js_sys::JsString};
 
 use crate::{OwlLogo, SideButtonLink};
 
 #[component(inline_props)]
 pub fn MainLayout<'a, G: Html>(cx: Scope<'a>, value: &'a ReadSignal<bool>) -> View<G> {
+    let auth = use_context::<Signal<i32>>(cx);
+
+    console::log_1(&JsString::from(format!("{}", auth.get())));
     view! { cx,
         (if *value.get() {
             view! { cx,

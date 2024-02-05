@@ -1,5 +1,5 @@
 use sycamore::prelude::*;
-use sycamore_router::navigate_replace;
+use sycamore_router::{navigate, navigate_replace};
 use web_sys::{console, js_sys::JsString};
 
 #[component(inline_props)]
@@ -9,11 +9,15 @@ pub fn SideButtonLink<'a, G: Html>(
     img_src: &'static str,
     to_link: &'static str,
 ) -> View<G> {
+    let logout = use_context::<Signal<i32>>(cx);
+
     let change_route = move |link_route| {
         if link_route != "/logout" {
             navigate_replace(link_route);
         } else {
-            console::log_1(&JsString::from("Logging out"));
+            logout.set(0);
+            navigate("/login");
+            console::log_1(&JsString::from(format!("{}", logout.get())));
         }
     };
 
